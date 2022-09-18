@@ -5,6 +5,8 @@
 Arm name - Kuka KR10 R1420
 Source repository link - https://github.com/ros-industrial/kuka_experimental
 
+Link to old repo - https://github.com/shyam-sundar-mg/Kuka-arm
+
 Modifications done:
  * Added inertia element to each link. (Calculated using Meshlab)
  * Attached the intelrealsense camera plug-in through the camera link.
