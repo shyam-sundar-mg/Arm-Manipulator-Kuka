@@ -1,0 +1,59 @@
+<?xml version="1.0" ?>
+<launch>
+	<param name="robot_description" command="$(find xacro)/xacro --inorder '$(find kuka_kr10_support)/urdf/kr10.urdf'"/>
+  
+	<!-- Spawn the robot model -->
+	<arg name="x" default="0"/>
+	<arg name="y" default="0.0"/>
+	<arg name="z" default="0.169"/>
+	<arg name="yaw" default="1.57"/>
+	<arg name="paused" default="false"/>
+	<arg name="initial_joint_positions" doc="Initial joint configuration of the robot"
+       default=" -J joint_a1 0 -J joint_a2 0 -J joint_a3 0 -J joint_a4 0 -J joint_a5 0 -J joint_a6 0"/>
+
+	
+<!--invoke empty gazebo -->
+<include file="$(find kuka_kr10_support)/launch/world.launch">   
+</include>
+
+<node name="mybot_spawn" pkg="gazebo_ros" type="spawn_model" output="screen" 
+		args="-urdf -param robot_description -model kuka_kr10r1420 -x $(arg x) -y $(arg y) $(arg initial_joint_positions)" />
+
+
+  <!-- moveit stuff -->
+<node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">
+    <param name="publish_frequency" type="double" value="50.0" />
+    <param name="tf_prefix" type="string" value="" />
+</node>
+
+<remap from="/follow_joint_trajectory" to="/arm_controller/follow_joint_trajectory"/>
+
+<rosparam file="$(find moveit_config)/config/joint_state_controller.yaml" command="load"/>
+    
+<node name="joint_state_controller_spawner" pkg="controller_manager" type="controller_manager" args="spawn joint_state_controller" respawn="false" output="screen"/>
+
+<rosparam file="$(find moveit_config)/config/trajectory_control.yaml" command="load"/>
+
+<node name="arm_controller_spawner" pkg="controller_manager" type="controller_manager" 
+args="spawn arm_controller gripper_controller" respawn="false" output="screen"/>
+
+<include file="$(find moveit_config)/launch/planning_context.launch" >
+    <arg name="load_robot_description" value="true" />
+</include>
+
+<node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
+    <param name="/use_gui" value="false"/>
+    <rosparam param="/source_list">[/joint_states]</rosparam>
+</node>
+
+<include file="$(find moveit_config)/launch/move_group.launch">
+    <arg name="publish_monitored_planning_scene" value="true" />
+ </include>
+  
+<include file="$(find moveit_config)/launch/moveit_rviz.launch">
+  <arg name="rviz_config" value="$(find moveit_config)/launch/moveit.rviz"/>
+  <arg name="debug" value="false"/>
+</include>   
+
+</launch>
+

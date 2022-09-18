@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+
+<!--robot param-->
+
+<param name="robot_description" command="$(find xacro)/xacro '$(find kuka_kr10_support)/urdf/kr10r1420.xacro'" />
+
+
+<!--invoke empty gazebo -->
+<include file="$(find gazebo_ros)/launch/empty_world.launch"/>
+
+
+<!-- gazebo node-->
+<node
+	name="mybot_spawn" 
+	pkg="gazebo_ros"
+	type="spawn_model" 
+	output="screen" 
+	args="-urdf -param robot_description 
+	-model kr10 " />
+	
+</launch>

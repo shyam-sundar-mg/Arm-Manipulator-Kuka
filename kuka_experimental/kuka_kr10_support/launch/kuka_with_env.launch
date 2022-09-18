@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<launch>
+	<param name="robot_description" 
+	       command="$(find xacro)/xacro --inorder '$(find kuka_kr10_support)/urdf/tmp2.urdf'"/>
+	<arg name="initial_joint_positions" 
+	     doc="Initial joint configuration of the robot"
+	     default=" -J joint_a1 0 -J joint_a2 -1.7 -J joint_a3 2.5 -J joint_a4 0 -J joint_a5 0 -J joint_a6 0"/>
+	<node name="mybot_spawn" 
+	      pkg="gazebo_ros"
+	      type="spawn_model"
+	      output="screen" 
+	      args="-urdf -param robot_description -model kuka_kr10r1420 $(arg initial_joint_positions)" />	
+	<include file="$(find kuka_kr10_support)/launch/world.launch">   
+	</include>
+</launch>
+

@@ -1,0 +1,13 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/shyam3/ambf/build/devel/lib/python3/dist-packages",
+        "/home/shyam3/catkin_ws/devel/lib/python3/dist-packages",
+        "/opt/ros/noetic/lib/python3/dist-packages"
+    ],
+    "ros.distro": "noetic",
+    "python.analysis.extraPaths": [
+        "/home/shyam3/ambf/build/devel/lib/python3/dist-packages",
+        "/home/shyam3/catkin_ws/devel/lib/python3/dist-packages",
+        "/opt/ros/noetic/lib/python3/dist-packages"
+    ]
+}

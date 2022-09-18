@@ -1,0 +1,632 @@
+<?xml version="1.0" ?>
+<robot name="kuka_kr10r1420">
+
+<!--LINKS-->
+
+<!--Base link-->
+<link name="base_link">
+    <visual>
+        <origin rpy="0 0 0" xyz="0 0 0" />
+        <geometry>
+            <mesh filename="package://kuka_kr10_support/meshes/kr10r1420/visual/base_link.stl" />
+        </geometry>
+        <material name="">
+            <color rgba="0.054901960784313725 0.054901960784313725 0.06274509803921569 1.0" />
+        </material>
+    </visual>
+    <collision>
+        <origin rpy="0 0 0" xyz="0 0 0" />
+        <geometry>
+            <mesh filename="package://kuka_kr10_support/meshes/kr10r1420/collision/base_link.stl" />
+        </geometry>
+    </collision>        
+    <inertial>
+        <mass value="52.6664" />
+        <origin rpy="0 0 0" xyz="-0.024332 -0.000227 0.124659" />
+        <inertia ixx="0.6474" iyy="-0.002261" izz="-0.0148" ixy="0.8089" ixz="-0.0005985" iyz="0.8872" />
+    </inertial>
+</link>  
+
+<!--Link 1-->
+<link name="link_1">
+    <visual>
+        <origin rpy="0 0 0" xyz="0 0 0" />
+        <geometry>
+            <mesh filename="package://kuka_kr10_support/meshes/kr10r1420/visual/link_1.stl" />
+        </geometry>
+        <material name="">
+            <color rgba="0.9647058823529412 0.47058823529411764 0.1568627450980392 1.0" />
+        </material>
+    </visual>
+    <collision>
+        <origin rpy="0 0 0" xyz="0 0 0" />
+        <geometry>
+            <mesh filename="package://kuka_kr10_support/meshes/kr10r1420/collision/link_1.stl" />
+        </geometry>
+    </collision>
+    <inertial>
+        <mass value="64.7425" />
+        <origin rpy="0 0 0" xyz="0.030634 0.027021 -0.054840" />
+        <inertia ixx="1.0225" ixy="-0.008725" ixz="-0.02372" iyy="1.0808" iyz="-0.03267" izz="1.1400" />
+    </inertial>
+</link>
+
+<!--Link 2-->
+<link name="link_2">
+    <visual>
+        <origin rpy="0 0 0" xyz="0 0 0" />
+        <geometry>
+            <mesh filename="package://kuka_kr10_support/meshes/kr10r1420/visual/link_2.stl" />
+        </geometry>
+        <material name="">
+            <color rgba="0.9647058823529412 0.47058823529411764 0.1568627450980392 1.0" />
+        </material>
+    </visual>
+    <collision>
+        <origin rpy="0 0 0" xyz="0 0 0" />
+        <geometry>
+            <mesh filename="package://kuka_kr10_support/meshes/kr10r1420/collision/link_2.stl" />
+        </geometry>
+    </collision>
+    <inertial>
+        <mass value="10.6532" />
+        <origin rpy="0 0 0" xyz="0.268622 -0.135342 0.007101" />
+        <inertia ixx="0.02242" ixy="0.009881" ixz="-0.001753" iyy="0.39866" iyz="0.0002086" izz="0.3909" />
+    </inertial>
+</link>
+
+<!--Link 3-->
+<link name="link_3">
+    <visual>
+        <origin rpy="0 0 0" xyz="0 0 0" />
+        <geometry>
+            <mesh filename="package://kuka_kr10_support/meshes/kr10r1420/visual/link_3.stl" />
+        </geometry>
+        <material name="">
+            <color rgba="0.9647058823529412 0.47058823529411764 0.1568627450980392 1.0" />
+        </material>
+    </visual>
+    <collision>
+        <origin rpy="0 0 0" xyz="0 0 0" />
+        <geometry>
+            <mesh filename="package://kuka_kr10_support/meshes/kr10r1420/collision/link_3.stl" />
+        </geometry>
+    </collision>
+    <inertial>
+        <mass value="25.0907" />
+        <origin rpy="0 0 0" xyz="0.101103 0.027129 0.001040" />
+        <inertia ixx="0.1632" ixy="0.02016" ixz="-0.01753" iyy="0.3261" iyz="0.006974" izz="0.3974" />
+    </inertial>
+</link>
+
+<!--Link 4-->
+<link name="link_4">
+    <visual>
+        <origin rpy="0 0 0" xyz="0 0 0" />
+        <geometry>
+            <mesh filename="package://kuka_kr10_support/meshes/kr10r1420/visual/link_4.stl" />
+        </geometry>
+        <material name="">
+            <color rgba="0.9647058823529412 0.47058823529411764 0.1568627450980392 1.0" />
+        </material>
+    </visual>
+    <collision>
+        <origin rpy="0 0 0" xyz="0 0 0" />
+        <geometry>
+            <mesh filename="package://kuka_kr10_support/meshes/kr10r1420/collision/link_4.stl" />
+        </geometry>
+    </collision>
+    <inertial>
+        <mass value="5.9403" />
+        <origin rpy="0 0 0" xyz="0.494754 0.000046 0.000066" />
+        <inertia ixx="0.01081" ixy="0.0001038" ixz="0.00002506" iyy="0.04533" iyz="0.00001522" izz="0.04716" />
+    </inertial>
+</link>
+
+<!--Link 5-->
+<link name="link_5">
+    <visual>
+        <origin rpy="0 0 0" xyz="0 0 0" />
+        <geometry>
+            <mesh filename="package://kuka_kr10_support/meshes/kr10r1420/visual/link_5.stl" />
+        </geometry>
+        <material name="">
+            <color rgba="0.9647058823529412 0.47058823529411764 0.1568627450980392 1.0" />
+        </material>
+    </visual>
+    <collision>
+        <origin rpy="0 0 0" xyz="0 0 0" />
+        <geometry>
+            <mesh filename="package://kuka_kr10_support/meshes/kr10r1420/collision/link_5.stl" />
+        </geometry>
+    </collision>
+    <inertial>
+        <mass value="0.8788" />
+        <origin rpy="0 0 0" xyz="0.015795 0.001915 -0.000032" />
+        <inertia ixx="0.0006327" ixy="0.000030398" ixz="0.0000006177" iyy="0.0010503" iyz="0.0000006576" izz="0.00111801" />
+    </inertial>
+</link>
+
+<!--Link 6-->
+<link name="link_6">
+    <visual>
+        <origin rpy="0 0 0" xyz="0 0 0" />
+        <geometry>
+            <mesh filename="package://kuka_kr10_support/meshes/kr10r1420/visual/link_6.stl" />
+        </geometry>
+        <material name="">
+            <color rgba="0.5058823529411764 0.47058823529411764 0.38823529411764707 1.0" />
+        </material>
+    </visual>
+    <collision>
+        <origin rpy="0 0 0" xyz="0 0 0" />
+        <geometry>
+            <mesh filename="package://kuka_kr10_support/meshes/kr10r1420/collision/link_6.stl" />
+        </geometry>
+    </collision>
+    <inertial>
+        <mass value="0.0279" />
+        <origin rpy="0 0 0" xyz="-0.007515 0.000002 0.000043" />
+        <inertia ixx="0.000006018" ixy="0.0" ixz="0.0" iyy="0.0000034076" iyz="0.0" izz="0.0000034076" />
+    </inertial>
+</link>
+
+<!--Gripper Fixture-->
+<link name="link_fixture">
+    <inertial>
+        <origin xyz="0.057944 0.006208 0.11949" rpy="0 0 0" />
+        <mass value="0.006525" />
+        <inertia ixx="3.2773E-05" ixy="-2.4774E-05" ixz="-9.3928E-06" iyy="6.0916E-05" iyz="-1.1663E-05" izz="8.1409E-05" />
+    </inertial>
+    <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+        <mesh filename="package://kuka_kr10_support/meshes/kr10r1420/visual/fixture.stl" />
+        </geometry>
+        <material name="">
+        <color rgba="0.79216 0.81961 0.93333 1" />
+        </material>
+    </visual>
+    <collision>
+        <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+        <geometry>
+        <mesh filename="package://kuka_kr10_support/meshes/kr10r1420/visual/fixture.stl" />
+        </geometry>
+    </collision>
+</link>
+
+<!--Base of gripper-->
+<link name="gripper_base">
+  <inertial>
+    <origin xyz="0.0201419011343415 -0.14488421675524 0.0596507179811779" rpy="0 0 0"/>
+    <mass value="0.3825" />
+    <inertia ixx="0.000159375" ixy="0" ixz="0" iyy="0.000825849375" iyz="0" izz="0.000825849375" />
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <geometry>
+      <mesh filename="package://kuka_kr10_support/meshes/kr10r1420/visual/gripper_base.STL" />
+    </geometry>
+    <material name="">
+      <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+    </material>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <geometry>
+      <mesh filename="package://kuka_kr10_support/meshes/kr10r1420/visual/gripper_base.STL" />
+    </geometry>
+  </collision>
+</link>
+
+<!--Left finger-->
+<link name="finger_left">
+  <inertial>
+    <origin xyz="-0.028124 -0.010692 0.025" rpy="0 0 0" />
+    <mass value="0.039517" />
+    <inertia ixx="2.4456E-05" ixy="-9.1518E-06" ixz="9.6198E-22" iyy="1.7547E-05" iyz="1.5479E-21" izz="2.5537E-05" />
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <geometry>
+      <mesh filename="package://kuka_kr10_support/meshes/kr10r1420/visual/finger_left.STL" />
+    </geometry>
+    <material name="">
+      <color rgba="0.79216 0.81961 0.93333 1" />
+    </material>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <geometry>
+      <mesh filename="package://kuka_kr10_support/meshes/kr10r1420/visual/finger_left.STL" />
+    </geometry>
+  </collision>
+</link>
+
+<!--Right finger-->
+<link name="finger_right">
+  <inertial>
+    <origin xyz="-0.028124 -0.010692 0.025" rpy="0 0 0"/>
+    <mass value="0.039517" />
+    <inertia ixx="2.4456E-05" ixy="-9.1518E-06" ixz="0" iyy="1.7547E-05" iyz="0" izz="2.5537E-05" />
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <geometry>
+      <mesh filename="package://kuka_kr10_support/meshes/kr10r1420/visual/finger_right.STL" />
+    </geometry>
+    <material name="">
+      <color rgba="0.79216 0.81961 0.93333 1" />
+    </material>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <geometry>
+      <mesh filename="package://kuka_kr10_support/meshes/kr10r1420/visual/finger_right.STL" />
+    </geometry>
+  </collision>
+</link>
+
+<link name="flange" />
+<link name="world" />
+<link name="camera_depth_frame" />
+<link name="camera_rgb_frame" />
+<link name="tool0" />
+
+<!--Camera Link-->
+<link name="camera_link">
+  <inertial>
+      <origin rpy="0 0 0" xyz="0.5 0.05 0.005"/>
+      <mass value="0.00045562499999999995"/>
+      <inertia ixx="0.000000111" ixy="0.0" ixz="0.0" iyy="0.00000627" iyz="-0.0" izz="0.0000067"/>
+  </inertial>
+  <visual>
+      <origin rpy="0 0 0" xyz="0.0 0 0"/>
+      <geometry>
+        <box size="0.1 0.05 0.025"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+    </material>
+  </visual>
+  <collision>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <box size="0.1 0.1 0.05"/>
+      </geometry>
+  </collision>
+</link>
+
+
+<!--JOINTS-->
+<!--Arm joints-->
+<joint name="joint_a1" type="revolute">
+    <origin rpy="0 0 0" xyz="0 0 0.450" />
+    <parent link="base_link" />
+    <child link="link_1" />
+    <axis xyz="0 0 -1" />
+    <dynamics damping="0.1" friction="150"/>
+    <limit effort="300" lower="-2.9670597283903604" upper="2.9670597283903604" velocity="3.839724354387525" />
+</joint>
+<joint name="joint_a2" type="revolute">
+    <origin rpy="0 0 0" xyz="0.150 0 0" />
+    <parent link="link_1" />
+    <child link="link_2" />
+    <axis xyz="0 1 0" />
+    <limit effort="1500" lower="-3.2288591161895095" upper="1.1344640137963142" velocity="3.6651914291880923" />
+    <dynamics damping="100.0" friction="1500"/>
+</joint>
+<joint name="joint_a3" type="revolute">
+    <origin rpy="0 0 0" xyz="0.610 0 0" />
+    <parent link="link_2" />
+    <child link="link_3" />
+    <axis xyz="0 1 0" />
+    <limit effort="300" lower="-2.3911010752322315" upper="2.8448866807507573" velocity="4.71238898038469" />
+    <dynamics damping="0.1" friction="150"/>
+</joint>
+<joint name="joint_a4" type="revolute">
+    <origin rpy="0 0 0" xyz="0 0 0.02" />
+    <parent link="link_3" />
+    <child link="link_4" />
+    <axis xyz="-1 0 0" />
+    <limit effort="300" lower="-3.2288591161895095" upper="3.2288591161895095" velocity="6.649704450098396" />
+    <dynamics damping="0.1" friction="150"/>
+</joint>
+<joint name="joint_a5" type="revolute">
+    <origin rpy="0 0 0" xyz="0.660 0 0" />
+    <parent link="link_4" />
+    <child link="link_5" />
+    <axis xyz="0 1 0" />
+    <limit effort="600" lower="-2.0943951023931953" upper="2.0943951023931953" velocity="5.427973973702365" />
+    <dynamics damping="0.1" friction="150"/>
+</joint>
+<joint name="joint_a6" type="revolute">
+    <origin rpy="0 0 0" xyz="0.080 0 0" />
+    <parent link="link_5" />
+    <child link="link_6" />
+    <axis xyz="-1 0 0" />
+    <limit effort="300" lower="-6.1086523819801535" upper="6.1086523819801535" velocity="8.587019919812102" />
+    <dynamics damping="0.1" friction="28"/>
+</joint>
+<joint name="joint_a6-flange" type="fixed">
+    <parent link="link_6" />
+    <child link="flange" />
+    <origin rpy="0 0 0" xyz="0 0 0" />
+</joint>
+
+<!--Gripper joints-->
+<joint name="joint_fixture" type="fixed">
+    <origin rpy="0 0 1.57" xyz="0 0 0" />
+    <parent link="link_6" />
+    <child link="link_fixture" />
+    <axis xyz="-1 0 0" />
+</joint>
+<joint name="joint_gripper" type="fixed">
+    <origin rpy="0 0 0" xyz="-0.02 0.118 -0.06"  />
+    <parent link="link_fixture" />
+    <child link="gripper_base" />
+    <axis xyz="-1 0 0" />
+</joint>
+<joint name="joint_left" type="prismatic">
+  <origin xyz="-0.0058581 -0.19138 0.034651" rpy="0 0 0" />
+  <parent link="gripper_base"/>
+  <child link="finger_left" />
+  <axis xyz="1 0 0" /> 
+  <limit lower="-0.025" upper="0.025" effort="10" velocity="6"/>
+</joint>
+<joint name="joint_right" type="prismatic">
+  <origin xyz="0.046142 -0.19138 0.084651" rpy="-3.1416 0 3.1416" />
+  <parent link="gripper_base"/>
+  <child link="finger_right"/>
+  <axis xyz="1 0 0"/>
+  <limit lower="-0.025" upper="0.025" effort="10" velocity="6" />
+</joint>
+
+
+<!-- ROS base_link to KUKA $ROBROOT coordinate system transform -->
+<joint name="base_link-base" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0" />
+    <parent link="world" />
+    <child link="base_link" />
+</joint>
+
+
+<!-- This frame corresponds to the $TOOL coordinate system in KUKA KRC controllers -->
+<joint name="flange-tool0" type="fixed">
+    <parent link="flange" />
+    <child link="tool0" />
+    <origin rpy="0 1.5707963267948966 0" xyz="0 0 0" />
+</joint>
+
+<!--Camera joint-->
+<joint name="camera_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0.018 -0.142 0.1"/>
+    <parent link="gripper_base"/>
+    <child link="camera_link"/>
+</joint>
+
+<joint name="camera_optical_joint" type="fixed">
+    <origin xyz="0 0 0" rpy="1.57 0 1.57"/>
+    <parent link="camera_link"/>
+    <child link="camera_rgb_frame"/>
+</joint>
+
+<joint name="camera_depth_joint" type="fixed">
+    <origin xyz="0 0 0" rpy="1.57 0 1.57"/>
+    <parent link="camera_link"/>
+    <child link="camera_depth_frame"/>
+</joint>
+
+<!--Transmission interface and actuators for all joints-->
+<transmission name="trans_joint_a1">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint_a1">
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="joint_a1_motor">
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+</transmission>
+<transmission name="trans_joint_a2">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint_a2">
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="joint_a2_motor">
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+</transmission>
+<transmission name="trans_joint_a3">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint_a3">
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="joint_a3_motor">
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+</transmission>
+<transmission name="trans_joint_a4">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint_a4">
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="joint_a4_motor">
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+</transmission>
+<transmission name="trans_joint_a5">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint_a5">
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="joint_a5_motor">
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+</transmission>
+<transmission name="trans_joint_a6">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint_a6">
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="joint_a6_motor">
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+</transmission>
+<transmission name="trans_joint_gripper">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint_gripper">
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="joint_gripper_motor">
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+</transmission>
+<transmission name="trans_joint_left">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint_left">
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="joint_left_motor">
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+</transmission>
+<transmission name="trans_joint_right">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint_right">
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="joint_right_motor">
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+</transmission>
+
+<!--Gazebo ROS control-->
+<gazebo>
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+        <robotNamespace>/kuka_arm</robotNamespace>
+    </plugin>
+</gazebo>
+
+
+<gazebo reference="base_link">
+    <material>Gazebo/Black</material>
+    <mu1>0.1</mu1>
+    <mu2>0.1</mu2>
+    <static>true</static>
+    <turnGravityOff>true</turnGravityOff>
+    <selfCollide>true</selfCollide>
+</gazebo>
+<gazebo reference="link_1">
+    <material>Gazebo/Orange</material>
+    <mu1>0.1</mu1>
+    <mu2>0.1</mu2>
+    <selfCollide>true</selfCollide>
+</gazebo>
+<gazebo reference="link_2">
+    <material>Gazebo/Orange</material>
+    <mu1>0.1</mu1>
+    <mu2>0.1</mu2>
+    <selfCollide>true</selfCollide>
+</gazebo>
+<gazebo reference="link_3">
+    <material>Gazebo/Orange</material>
+    <mu1>0.1</mu1>
+    <mu2>0.1</mu2>
+    <selfCollide>true</selfCollide>
+</gazebo>
+<gazebo reference="link_4">
+    <material>Gazebo/Orange</material>
+    <mu1>0.1</mu1>
+    <mu2>0.1</mu2>
+    <selfCollide>true</selfCollide>
+</gazebo>
+<gazebo reference="link_5">
+    <material>Gazebo/Orange</material>
+    <mu1>0.1</mu1>
+    <mu2>0.1</mu2>
+    <selfCollide>true</selfCollide>
+</gazebo>
+<gazebo reference="link_6">
+    <material>Gazebo/Orange</material>
+    <mu1>0.1</mu1>
+    <mu2>0.1</mu2>
+    <selfCollide>true</selfCollide>
+</gazebo>
+<gazebo reference="gripper_base">
+    <material>Gazebo/Black</material>
+    <mu1>0.1</mu1>
+    <mu2>0.1</mu2>
+    <selfCollide>true</selfCollide>
+</gazebo>
+<gazebo reference="finger_right">
+    <material>Gazebo/Grey</material>
+    <mu1>0.1</mu1>
+    <mu2>0.1</mu2>
+    <selfCollide>true</selfCollide>
+</gazebo>
+<gazebo reference="finger_left">
+    <material>Gazebo/Grey</material>
+    <mu1>0.1</mu1>
+    <mu2>0.1</mu2>
+    <selfCollide>true</selfCollide>
+</gazebo>
+
+
+<!--Camera link with camera plugin-->
+<gazebo reference="camera_link">
+    <sensor type="depth" name="intelrealsense2">
+        <always_on>1</always_on>
+        <visualize>true</visualize>
+        <camera>
+        <horizontal_fov>1.047</horizontal_fov>
+        <image>
+            <width>640</width>
+            <height>480</height>
+            <format>R8G8B8</format>
+        </image>
+        <depth_camera>
+
+        </depth_camera>
+        <clip>
+            <near>0.1</near>
+            <far>100</far>
+        </clip>
+        </camera>
+        <plugin name="intelrealsense" filename="libgazebo_ros_openni_kinect.so">
+        <alwaysOn>true</alwaysOn>
+        <updateRate>10.0</updateRate>
+        <cameraName>camera</cameraName>
+        <frameName>camera_depth_frame</frameName>
+        <imageTopicName>/camera/color/image_raw</imageTopicName>
+        <depthImageTopicName>/camera/depth/image_raw</depthImageTopicName>
+        <pointCloudTopicName>depth/points</pointCloudTopicName>
+        <cameraInfoTopicName>/camera/color/camera_info</cameraInfoTopicName>
+        <depthImageCameraInfoTopicName>/camera/depth/camera_info</depthImageCameraInfoTopicName>
+            <pointCloudCutoff>0.2</pointCloudCutoff>
+            <pointCloudCutoffMax>10.0</pointCloudCutoffMax>
+        <hackBaseline>0.07</hackBaseline>
+        <distortionK1>0.0</distortionK1>
+        <distortionK2>0.0</distortionK2>
+        <distortionK3>0.0</distortionK3>
+        <distortionT1>0.0</distortionT1>
+        <distortionT2>0.0</distortionT2>
+        <CxPrime>0.0</CxPrime>
+        <Cx>0.0</Cx>
+        <Cy>0.0</Cy>
+        <focalLength>0.0</focalLength>
+        </plugin>
+    </sensor>
+</gazebo>
+
+</robot>
