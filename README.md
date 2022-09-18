@@ -8,7 +8,7 @@ Source repository link - https://github.com/ros-industrial/kuka_experimental
 Link to old repo - https://github.com/shyam-sundar-mg/Kuka-arm
 
 Modifications done:
- * Added inertia element to each link. (Calculated using Meshlab) (https://github.com/shyam-sundar-mg/Arm-Manipulator-Kuka/blob/main/kuka_experimental/kuka_kr10_support/meshes/kr10r1420/inertia_details.ods)
+ * Added inertia element to each link. (Calculated using Meshlab) 
  * Attached the intelrealsense camera plug-in through the camera link.
  * Attached a gripper link.
 
