@@ -14,8 +14,7 @@ Modifications done:
 
 Progress:
  - [x] Moveit Setup for arm
- - [x] Forward Kinematics using OMPL planner
- - [x] Inverse Kinematics using OMPL planner
+ - [x] Forward and Inverse Kinematics using OMPL planner
  
  Link for video:
  https://drive.google.com/file/d/1P5Kcih5bqxdbGG423fsxMVZsDV7M660N/view?usp=sharing
